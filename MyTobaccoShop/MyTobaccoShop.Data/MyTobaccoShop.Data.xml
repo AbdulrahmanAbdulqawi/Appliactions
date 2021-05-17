@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyTobaccoShop.Data</name>
+    </assembly>
+    <members>
+        <member name="T:MyTobaccoShop.Data.Models.Category">
+            <summary>
+            Category Class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Category.CategoryID">
+            <summary>
+            Gets or Sets Category ID property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Category.CategoryTitle">
+            <summary>
+            Gets or Sets Category Title.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Category.CategoryDescription">
+            <summary>
+            Gets or Sets Category Description.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.Data.Models.Customer">
+            <summary>
+            Customer Class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Customer.CustomerID">
+            <summary>
+            Gets or Sets Customer ID Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Customer.CustomerName">
+            <summary>
+            Gets or Sets Customer Name Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Customer.CustomerEmail">
+            <summary>
+            Gets or Sets Customer Email Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Customer.CustomerContact">
+            <summary>
+            Gets or Sets Customer Contact Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Customer.CustomerAddress">
+            <summary>
+            Gets or Sets Customer Address Property.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext">
+            <summary>
+            MyTobaccoShopDBContext Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext"/> class.
+            PoliceAppDbContext constructor.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.Products">
+            <summary>
+            Gets or Sets Products Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.Users">
+            <summary>
+            Gets or Sets Users Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.Customers">
+            <summary>
+            Gets or Sets Customers Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.Orders">
+            <summary>
+            Gets or Sets Orders Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.Categories">
+            <summary>
+            Gets or Sets Categories Property.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            OnConfiguring method, connects to the database using the connection string.
+            </summary>
+            <param name="optionsBuilder">optionsBuilder parameter.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            OnModelCreating method, Create a model.
+            </summary>
+            <param name="modelBuilder">model to build.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Data.Models.Order">
+            <summary>
+            Order Class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Order.OrderID">
+            <summary>
+            Gets or Sets Order ID Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Order.OrderQuantity">
+            <summary>
+            Gets or Sets Order Quantity Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Order.CustomerId">
+            <summary>
+            Gets or Sets Customer ID Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Order.ProductId">
+            <summary>
+            Gets or Sets Product ID Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Order.Customer">
+            <summary>
+            Gets or Sets Customer Object Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Order.Product">
+            <summary>
+            Gets or Sets Product Object Property.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.Data.Models.Product">
+            <summary>
+            Product Class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Product.ProductID">
+            <summary>
+            Gets or Sets Product ID Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Product.ProductName">
+            <summary>
+            Gets or Sets Product Name Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Product.ProductPrice">
+            <summary>
+            Gets or Sets Product Price Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Product.CategoryId">
+            <summary>
+            Gets or Sets Category ID Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.Product.Category">
+            <summary>
+            Gets or Sets Category Object Property.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.Data.Models.User">
+            <summary>
+            User Class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.User.UserID">
+            <summary>
+            Gets or Sets User ID Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.User.UserFullName">
+            <summary>
+            Gets or Sets User Full Name Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.User.UserEmail">
+            <summary>
+            Gets or Sets User Email Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.User.UserUsername">
+            <summary>
+            Gets or Sets User Username Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.User.UserPassword">
+            <summary>
+            Gets or Sets User Password Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Data.Models.User.UserType">
+            <summary>
+            Gets or Sets User Type Property.
+            </summary>
+        </member>
+    </members>
+</doc>

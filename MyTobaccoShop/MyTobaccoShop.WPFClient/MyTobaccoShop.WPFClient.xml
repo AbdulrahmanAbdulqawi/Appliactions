@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyTobaccoShop.WPFClient</name>
+    </assembly>
+    <members>
+        <member name="T:MyTobaccoShop.WPFClient.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPFClient.App"/> class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPFClient.EditorWindow">
+            <summary>
+            Interaction logic for EditorWindow.xaml.
+            </summary>
+            <summary>
+            EditorWindow
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPFClient.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.EditorWindow.#ctor(MyTobaccoShop.WPFClient.UserVM)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPFClient.EditorWindow"/> class.
+            Ediotr Window.
+            </summary>
+            <param name="user">User.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.EditorWindow.OKClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            OkClick Event.
+            </summary>
+            <param name="sender">sendr.</param>
+            <param name="e">Event Argumanet.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.EditorWindow.CancelClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            CancelClick Event.
+            </summary>
+            <param name="sender">sendr.</param>
+            <param name="e">Event Argumanet.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.EditorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPFClient.IMainLogic">
+            <summary>
+            Defenition of functionalities that MainLogic must implement.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.IMainLogic.ApiGetUsers">
+            <summary>
+            Get all Users.
+            </summary>
+            <returns>Any List of type UserVM.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.IMainLogic.ApiDelUser(MyTobaccoShop.WPFClient.UserVM)">
+            <summary>
+            Delete A user.
+            </summary>
+            <param name="user">user.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.IMainLogic.EditUser(MyTobaccoShop.WPFClient.UserVM,System.Func{MyTobaccoShop.WPFClient.UserVM,System.Boolean})">
+            <summary>
+            Edit User.
+            </summary>
+            <param name="user">User.</param>
+            <param name="editorFunc">Editor Function.</param>
+        </member>
+        <member name="T:MyTobaccoShop.WPFClient.MainLogic">
+            <summary>
+            Main Logic Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainLogic.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPFClient.MainLogic"/> class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainLogic.ApiGetUsers">
+            <summary>
+            Api Get Users Method.
+            </summary>
+            <returns>List Of Users.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainLogic.ApiDelUser(MyTobaccoShop.WPFClient.UserVM)">
+            <summary>
+            Delete a User.
+            </summary>
+            <param name="user">User.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainLogic.EditUser(MyTobaccoShop.WPFClient.UserVM,System.Func{MyTobaccoShop.WPFClient.UserVM,System.Boolean})">
+            <summary>
+            Edit User.
+            </summary>
+            <param name="user">User.</param>
+            <param name="editorFunc">Editor Function.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainLogic.ApiEditUser(MyTobaccoShop.WPFClient.UserVM,System.Boolean)">
+            <summary>
+            Edit User.
+            </summary>
+            <param name="user">User.</param>
+            <param name="isEditing">IsEditing mode.</param>
+            <returns>True or False.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainLogic.SendMessage(System.Boolean)">
+            <summary>
+            Send Message Method.
+            </summary>
+            <param name="success">boolean var.</param>
+        </member>
+        <member name="T:MyTobaccoShop.WPFClient.MainVM">
+            <summary>
+            Main View Model Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainVM.#ctor(MyTobaccoShop.WPFClient.IMainLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPFClient.MainVM"/> class.
+            </summary>
+            <param name="logic">MainLogic itself.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainVM.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPFClient.MainVM"/> class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.MainVM.AllUsers">
+            <summary>
+            Gets or Sets All Users.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.MainVM.SelectedUser">
+            <summary>
+            Gets or Sets User.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.MainVM.EditorFunc">
+            <summary>
+            Gets or Sets Editor.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.MainVM.AddCmd">
+            <summary>
+            Gets ts Add Command.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.MainVM.DelCmd">
+            <summary>
+            Gets Del Command.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.MainVM.EditCmd">
+            <summary>
+            Gets Edit Command.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.MainVM.LoadCmd">
+            <summary>
+            Gets Load Command.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPFClient.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPFClient.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Window Loaded Event.
+            </summary>
+            <param name="sender">sender.</param>
+            <param name="e">event Arguments.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainWindow.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Window Closing Event.
+            </summary>
+            <param name="sender">sender.</param>
+            <param name="e">event Arguments.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPFClient.MyIoc">
+            <summary>
+            MyIoc class which is a custom IoC container.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.MyIoc.Instance">
+            <summary>
+            Gets instacle which is a singleton, so that we don't have to worry about the instance creation.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPFClient.UserVM">
+            <summary>
+            User View Model Class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.UserVM.UserId">
+            <summary>
+            Gets Or Sets User ID.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.UserVM.UserFullName">
+            <summary>
+            Gets Or Sets User ID.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.UserVM.UserEmail">
+            <summary>
+            Gets Or Sets User FullName.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.UserVM.UserUserName">
+            <summary>
+            Gets Or Sets User Emial.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.UserVM.UserPassword">
+            <summary>
+            Gets Or Sets User UserName.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPFClient.UserVM.UserType">
+            <summary>
+            Gets Or Sets User Password.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPFClient.UserVM.CopyFrom(MyTobaccoShop.WPFClient.UserVM)">
+            <summary>
+            CopyFrom method to copy one UserModel instance into a different one.
+            </summary>
+            <param name="other">The UserModel instance to copy from.</param>
+        </member>
+    </members>
+</doc>

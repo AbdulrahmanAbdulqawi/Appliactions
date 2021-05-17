@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyTobaccoShop.WPF</name>
+    </assembly>
+    <members>
+        <member name="T:MyTobaccoShop.WPF.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPF.App"/> class.
+            App consturctor used to execute everything when the application starts.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.BL.IEditorService">
+            <summary>
+            Editor Service Interface.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.IEditorService.EditUser(MyTobaccoShop.WPF.Data.UserModel)">
+            <summary>
+            Edit User Method.
+            </summary>
+            <param name="user">user ob.</param>
+            <returns>boolean.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.BL.IUserLogicWPF">
+            <summary>
+            User Logic Interface.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.IUserLogicWPF.GetUsers(System.Collections.Generic.IList{MyTobaccoShop.WPF.Data.UserModel})">
+            <summary>
+            Get All Users.
+            </summary>
+            <param name="users">Collection of Users.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.IUserLogicWPF.AddUser(System.Collections.Generic.IList{MyTobaccoShop.WPF.Data.UserModel})">
+            <summary>
+            Add New User.
+            </summary>
+            <param name="users">Collection of Users.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.IUserLogicWPF.UpdateUser(MyTobaccoShop.WPF.Data.UserModel)">
+            <summary>
+            Update User's Info.
+            </summary>
+            <param name="user">user obj.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.IUserLogicWPF.DeleteUser(System.Collections.Generic.IList{MyTobaccoShop.WPF.Data.UserModel},MyTobaccoShop.WPF.Data.UserModel)">
+            <summary>
+            Delete User.
+            </summary>
+            <param name="users">Collection Of Users.</param>
+            <param name="user">uesr obj.</param>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.BL.UserLogicWPF">
+            <summary>
+            User Logic WPF CLass.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.UserLogicWPF.#ctor(MyTobaccoShop.WPF.BL.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPF.BL.UserLogicWPF"/> class.
+            StationLogic constructor resposible for setting the IEditorService and the IMessenger interfaces.
+            </summary>
+            <param name="editorService">EditorService interface.</param>
+            <param name="messenger">MessengerService interface.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.UserLogicWPF.GetUsers(System.Collections.Generic.IList{MyTobaccoShop.WPF.Data.UserModel})">
+            <summary>
+            Get all Users method responsible.
+            </summary>
+            <param name="users">List of users to be displayed.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.UserLogicWPF.AddUser(System.Collections.Generic.IList{MyTobaccoShop.WPF.Data.UserModel})">
+            <summary>
+            add user method ressposible for adding users to the UI and DB.
+            </summary>
+            <param name="users">List of stations to be added.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.UserLogicWPF.UpdateUser(MyTobaccoShop.WPF.Data.UserModel)">
+            <summary>
+            UpdateUser method responsible for updating one user in instance.
+            </summary>
+            <param name="user">USer.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.BL.UserLogicWPF.DeleteUser(System.Collections.Generic.IList{MyTobaccoShop.WPF.Data.UserModel},MyTobaccoShop.WPF.Data.UserModel)">
+            <summary>
+            DeleteUser method responsible for deleting a user from the UI and from the DB.
+            </summary>
+            <param name="users">List of all the users in the DB.</param>
+            <param name="user">user to be deleted.</param>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.Data.UserModel">
+            <summary>
+            User Model Class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.Data.UserModel.UserId">
+            <summary>
+            Gets Or Sets User ID.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.Data.UserModel.UserFullName">
+            <summary>
+            Gets Or Sets User ID.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.Data.UserModel.UserEmail">
+            <summary>
+            Gets Or Sets User FullName.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.Data.UserModel.UserUsername">
+            <summary>
+            Gets Or Sets User Emial.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.Data.UserModel.UserPassword">
+            <summary>
+            Gets Or Sets User UserName.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.Data.UserModel.UserType">
+            <summary>
+            Gets Or Sets User Password.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.Data.UserModel.CopyFrom(MyTobaccoShop.WPF.Data.UserModel)">
+            <summary>
+            CopyFrom method to copy one UserModel instance into a different one.
+            </summary>
+            <param name="other">The UserModel instance to copy from.</param>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPF.MainWindow"/> class.
+            MainWindow zero-parameter constructor.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.MyIoc">
+            <summary>
+            MyIoc class which is a custom IoC container.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.MyIoc.Instance">
+            <summary>
+            Gets instacle which is a singleton, so that we don't have to worry about the instance creation.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.UI.EditorServiceViaWindow">
+            <summary>
+            EditorServiceViaWindow Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.UI.EditorServiceViaWindow.EditUser(MyTobaccoShop.WPF.Data.UserModel)">
+            <summary>
+            Edit User Method.
+            </summary>
+            <param name="user">user Obj.</param>
+            <returns>boolean vakue.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.UI.EditorWindow">
+            <summary>
+            Interaction logic for EditorWindow.xaml.
+            </summary>
+            <summary>
+            EditorWindow
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.UI.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPF.UI.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.UI.EditorWindow.#ctor(MyTobaccoShop.WPF.Data.UserModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPF.UI.EditorWindow"/> class.
+            </summary>
+            <param name="oldUser">old user obj.</param>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.UI.EditorWindow.User">
+            <summary>
+            Gets User.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.UI.EditorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.VM.EditorViewModel">
+            <summary>
+            Editor View Model Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.VM.EditorViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPF.VM.EditorViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.VM.EditorViewModel.User">
+            <summary>
+            Gets or Sets User.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.WPF.VM.MainViewModel">
+            <summary>
+            Main View Model Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.VM.MainViewModel.#ctor(MyTobaccoShop.WPF.BL.IUserLogicWPF)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPF.VM.MainViewModel"/> class.
+            </summary>
+            <param name="userLogic">userLogic Obj.</param>
+        </member>
+        <member name="M:MyTobaccoShop.WPF.VM.MainViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.WPF.VM.MainViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.VM.MainViewModel.SelectedUser">
+            <summary>
+            Gets or Sets Selected User.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.VM.MainViewModel.Users">
+            <summary>
+            Gets A collection Of Users.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.VM.MainViewModel.GetCommand">
+            <summary>
+            Gets get Command.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.VM.MainViewModel.AddCommand">
+            <summary>
+            Gets Add Command.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.VM.MainViewModel.DeleteCommand">
+            <summary>
+            Gets Delete Command.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.WPF.VM.MainViewModel.EditeCommand">
+            <summary>
+            Gets Edite Command.
+            </summary>
+        </member>
+    </members>
+</doc>

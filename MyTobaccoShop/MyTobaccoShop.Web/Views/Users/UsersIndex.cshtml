@@ -1,0 +1,13 @@
+﻿@model MyTobaccoShop.Web.Models.UserListViewModel
+
+@{
+    ViewData["Title"] = "UsersIndex";
+}
+
+<h2>Users Index</h2>
+
+<p style="color:red">@TempData["editResult"]</p>
+
+@await Html.PartialAsync("UsersEdit",Model.EditedUser)
+
+@await Html.PartialAsync("UsersList",Model.ListOfUsers)

@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyTobaccoShop.Web</name>
+    </assembly>
+    <members>
+        <member name="T:MyTobaccoShop.Web.Controllers.ApiResult">
+            <summary>
+            Nested Class.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Controllers.ApiResult.OperationResult">
+            <summary>
+            Gets or sets a value indicating whether gets or Sets.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Controllers.HomeController">
+            <summary>
+            Home Controller.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{MyTobaccoShop.Web.Controllers.HomeController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Web.Controllers.HomeController"/> class.
+            </summary>
+            <param name="logger">logger.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.HomeController.Index">
+            <summary>
+            index Method.
+            </summary>
+            <returns>View.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.HomeController.Privacy">
+            <summary>
+            privacy Method.
+            </summary>
+            <returns>View.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.HomeController.Error">
+            <summary>
+            Error Method.
+            </summary>
+            <returns>View.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Controllers.UsersApiController">
+            <summary>
+            Users API Controller Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersApiController.#ctor(MyTobaccoShop.Logic.IUserLogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Web.Controllers.UsersApiController"/> class.
+            </summary>
+            <param name="logic">logic.</param>
+            <param name="mapper">Mapper.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersApiController.GetAll">
+            <summary>
+            Get Users.
+            </summary>
+            <returns>Users.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersApiController.DelOneUser(System.Int32)">
+            <summary>
+            Delete User.
+            </summary>
+            <param name="id">User id.</param>
+            <returns>Boolean value.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersApiController.AddOneUser(MyTobaccoShop.Web.Models.UserWeb)">
+            <summary>
+            Add User.
+            </summary>
+            <param name="newUser">User.</param>
+            <returns>Boolean value.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersApiController.ModOneCar(MyTobaccoShop.Web.Models.UserWeb)">
+            <summary>
+            Add User.
+            </summary>
+            <param name="user">User.</param>
+            <returns>Boolean value.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Controllers.UsersController">
+            <summary>
+            USer Controller.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersController.#ctor(MyTobaccoShop.Logic.IUserLogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Web.Controllers.UsersController"/> class.
+            </summary>
+            <param name="logic">logic.</param>
+            <param name="mapper">mapper.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersController.Index">
+            <summary>
+            Index Method.
+            </summary>
+            <returns>View of Users.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersController.Details(System.Int32)">
+            <summary>
+            User Details.
+            </summary>
+            <param name="id">user id.</param>
+            <returns>user view.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersController.Remove(System.Int32)">
+            <summary>
+            Remove User Method.
+            </summary>
+            <param name="id">User Id.</param>
+            <returns>Redirect.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersController.Edit(System.Int32)">
+            <summary>
+            Edit User Method.
+            </summary>
+            <param name="id">User id.</param>
+            <returns>View.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersController.Edit(MyTobaccoShop.Web.Models.UserWeb,System.String)">
+            <summary>
+            Edit User.
+            </summary>
+            <param name="user">user Obj.</param>
+            <param name="editAction">action.</param>
+            <returns>View.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Controllers.UsersController.GetUserModel(System.Int32)">
+            <summary>
+            Get User Model.
+            </summary>
+            <param name="id">USer id.</param>
+            <returns>User.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Models.ErrorViewModel">
+            <summary>
+            Error View Model.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.ErrorViewModel.RequestId">
+            <summary>
+            Gets or Sets Request Id Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            Gets a value indicating whether gets show Request Id.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Models.MapperFactory">
+            <summary>
+            Mapper Factory Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Models.MapperFactory.CreateMapper">
+            <summary>
+            Create Mapper Method.
+            </summary>
+            <returns>IMapper.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Models.UserListViewModel">
+            <summary>
+            User View Model.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.UserListViewModel.EditedUser">
+            <summary>
+            Gets or Sets EditedUser.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.UserListViewModel.ListOfUsers">
+            <summary>
+            Gets or Sets ListOfUsers.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Models.UserWeb">
+            <summary>
+            User Model class Web App.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.UserWeb.UserId">
+            <summary>
+            Gets or Sets User ID Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.UserWeb.UserFullName">
+            <summary>
+            Gets or Sets User Full Name Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.UserWeb.UserEmail">
+            <summary>
+            Gets or Sets User Email Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.UserWeb.UserUsername">
+            <summary>
+            Gets or Sets User Username Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.UserWeb.UserPassword">
+            <summary>
+            Gets or Sets User Password Property.
+            </summary>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Models.UserWeb.UserType">
+            <summary>
+            Gets or Sets User Type Property.
+            </summary>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Program">
+            <summary>
+            Program Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Program.Main(System.String[])">
+            <summary>
+            Main Method.
+            </summary>
+            <param name="args">array.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Create Host builder Method.
+            </summary>
+            <param name="args">args.</param>
+            <returns>Startup.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.Web.Startup">
+            <summary>
+            Startup Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Web.Startup"/> class.
+            </summary>
+            <param name="configuration">config.</param>
+        </member>
+        <member name="P:MyTobaccoShop.Web.Startup.Configuration">
+            <summary>
+            Gets Confi.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">services.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">app.</param>
+            <param name="env">env.</param>
+        </member>
+    </members>
+</doc>

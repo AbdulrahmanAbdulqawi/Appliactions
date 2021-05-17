@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyTobaccoShop.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:MyTobaccoShop.Logic.IUserLogic">
+            <summary>
+            User Logic Interface.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.IUserLogic.AddUser(MyTobaccoShop.Data.Models.User)">
+            <summary>
+            Add User Method.
+            </summary>
+            <param name="user">User Obj.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.IUserLogic.AddUser(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Add a new user based on paramaters.
+            </summary>
+            <param name="fullName">Name.</param>
+            <param name="email">Email.</param>
+            <param name="username">Username.</param>
+            <param name="password">Password.</param>
+            <param name="type">Type.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.IUserLogic.ChangeUser(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Change User.
+            </summary>
+            <param name="id">id.</param>
+            <param name="fullName">Name.</param>
+            <param name="email">Email.</param>
+            <param name="username">Username.</param>
+            <param name="password">Password.</param>
+            <param name="type">Type.</param>
+            <returns>boolean value.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.IUserLogic.UpdateUser(System.Int32,MyTobaccoShop.Data.Models.User)">
+            <summary>
+            Update User Method.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="user">New User Obj.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.IUserLogic.DeleteUser(System.Int32)">
+            <summary>
+            Delete User By ID Method.
+            </summary>
+            <param name="id">User ID.</param>
+            <returns>boolean value.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.IUserLogic.GetUser(System.Int32)">
+            <summary>
+            Get One User By ID Method.
+            </summary>
+            <param name="id">User ID.</param>
+            <returns>User.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.IUserLogic.GetUsers">
+            <summary>
+            Get ALL Users.
+            </summary>
+            <returns>Collection Of Users.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.IUserLogic.UpdateUserType(System.Int32,System.String)">
+            <summary>
+            Update User Type.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="newType">User new Type.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Logic.UserLogic">
+            <summary>
+            User Logic Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.#ctor(MyTobaccoShop.Repository.MyUser.IUserRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Logic.UserLogic"/> class.
+            </summary>
+            <param name="userRepository">User repository obj.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.AddUser(MyTobaccoShop.Data.Models.User)">
+            <summary>
+            Add User Method.
+            </summary>
+            <param name="user">User Obj.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.AddUser(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Add a new user based on paramaters.
+            </summary>
+            <param name="fullName">Name.</param>
+            <param name="email">Email.</param>
+            <param name="username">Username.</param>
+            <param name="password">Password.</param>
+            <param name="type">Type.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.ChangeUser(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Change User.
+            </summary>
+            <param name="id">id.</param>
+            <param name="fullName">Name.</param>
+            <param name="email">Email.</param>
+            <param name="username">Username.</param>
+            <param name="password">Password.</param>
+            <param name="type">Type.</param>
+            <returns>boolean value.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.DeleteUser(System.Int32)">
+            <summary>
+            Delete User By ID Method.
+            </summary>
+            <param name="id">User ID.</param>
+            <returns>boolea value.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.GetUser(System.Int32)">
+            <summary>
+            Get One User By ID Method.
+            </summary>
+            <param name="id">User ID.</param>
+            <returns>User.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.GetUsers">
+            <summary>
+            Get ALL Users.
+            </summary>
+            <returns>Collection Of Users.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.UpdateUser(System.Int32,MyTobaccoShop.Data.Models.User)">
+            <summary>
+            Update User Method.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="user">New User Obj.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Logic.UserLogic.UpdateUserType(System.Int32,System.String)">
+            <summary>
+            Update User Type.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="newType">User new Type.</param>
+        </member>
+    </members>
+</doc>

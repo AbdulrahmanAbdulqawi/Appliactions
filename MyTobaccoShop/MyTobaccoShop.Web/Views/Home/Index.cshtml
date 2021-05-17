@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>API test X</h2>
+
+<p id="message" style="color:red;font-weight:bold"></p>
+<ul id="users"></ul>
+User ID:
+<input type="text" id="userId" />
+<br />
+<button onclick="doList()">LIST</button>
+<button onclick="doListNEW()">LIST NEW</button>
+<button onclick="doAdd()">ADD</button>
+<button onclick="doMod()">MOD</button>
+<button onclick="doDel()">DEL</button>
+
+@section scripts {
+    <script language="javascript">
+        var url = "http://localhost:53349/UsersApi/";
+
+        // XSS = Cross Site Scripting
+        function htmlEncode(value) {
+            return $('<div />').text(value).html();
+        }
+
+        function doList() {
+            $.get(url + "all", null, function (data, status, jqxr) {
+                alert("ALL: " + data);
+            }, "html");
+        }
+        function doListNEW() {
+            $("#users").html("");
+            $.getJSON(url + "all")
+                .done(function (data) {
+                    $.each(data, function (key, item) {
+                        var html = "<li>#" +
+                            htmlEncode(item.userId) + " " +
+                            htmlEncode(item.userFullName) + " " +
+                            htmlEncode(item.userEmail) + " for " +
+                            htmlEncode(item.userUsername) + " " +
+                            htmlEncode(item.userPassword) + " " +
+                            htmlEncode(item.userType) + " </li>";
+                        $("#users").append(html);
+                    });
+                });
+        }
+
+        function doAdd() {
+            var newUser = {
+                "userFullName":"Sara", "userEmail": "sara2020@gmail.com", "userUsername": "sara2020", "userPassword": "sara32324", "userType": "Admin"
+            };
+            $.post(url + "add", newUser, function (data, status, jqxr) {
+                $("#message").html("ADD: " + data.operationResult);
+                doListNEW();
+            });
+        }
+        function doMod() {
+            var newUser = {
+                "Id": $("#userId").val(), "userFullName": "Adam", "userEmail": "Adam2020@gmail.com", "userUsername": "Adam2020", "userPassword": "Adam32324", "userType": "Admin"
+            };
+            $.post(url + "mod", newUser, function (data, status, jqxr) {
+                $("#message").html("MOD: " + data.operationResult);
+                doListNEW();
+            });
+        }
+        function doDel() {
+            $.get(url + "del/" + $("#userId").val(), null, function (data, status, jqxr) {
+                $("#message").html("DEL: " + data.operationResult);
+                doListNEW();
+            });
+        }
+    </script>
+}

@@ -1,0 +1,30 @@
+﻿@model MyTobaccoShop.Web.Models.UserWeb
+
+<h2>Users Editor</h2>
+@using (Html.BeginForm("Edit", "Users"))
+{
+    @Html.ValidationSummary()
+
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.UserId)
+
+    @Html.Hidden("editAction", ViewData["editAction"].ToString())
+
+    <div class="editor-label">@Html.LabelFor(m => m.UserFullName)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.UserFullName)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.UserEmail)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.UserEmail)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.UserUsername)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.UserUsername)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.UserPassword)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.UserPassword)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.UserType)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.UserType)</div>
+
+    <input type="submit" value="SEND"/>
+}

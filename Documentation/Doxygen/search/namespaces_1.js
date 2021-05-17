@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['bl_244',['BL',['../namespace_my_tobacco_shop_1_1_w_p_f_1_1_b_l.html',1,'MyTobaccoShop::WPF']]],
+  ['controllers_245',['Controllers',['../namespace_my_tobacco_shop_1_1_web_1_1_controllers.html',1,'MyTobaccoShop::Web']]],
+  ['data_246',['Data',['../namespace_my_tobacco_shop_1_1_data.html',1,'MyTobaccoShop.Data'],['../namespace_my_tobacco_shop_1_1_w_p_f_1_1_data.html',1,'MyTobaccoShop.WPF.Data']]],
+  ['logic_247',['Logic',['../namespace_my_tobacco_shop_1_1_logic.html',1,'MyTobaccoShop']]],
+  ['models_248',['Models',['../namespace_my_tobacco_shop_1_1_data_1_1_models.html',1,'MyTobaccoShop.Data.Models'],['../namespace_my_tobacco_shop_1_1_web_1_1_models.html',1,'MyTobaccoShop.Web.Models']]],
+  ['mycategory_249',['MyCategory',['../namespace_my_tobacco_shop_1_1_repository_1_1_my_category.html',1,'MyTobaccoShop::Repository']]],
+  ['mycustomer_250',['MyCustomer',['../namespace_my_tobacco_shop_1_1_repository_1_1_my_customer.html',1,'MyTobaccoShop::Repository']]],
+  ['myorder_251',['MyOrder',['../namespace_my_tobacco_shop_1_1_repository_1_1_my_order.html',1,'MyTobaccoShop::Repository']]],
+  ['myproduct_252',['MyProduct',['../namespace_my_tobacco_shop_1_1_repository_1_1_my_product.html',1,'MyTobaccoShop::Repository']]],
+  ['mytobaccoshop_253',['MyTobaccoShop',['../namespace_my_tobacco_shop.html',1,'']]],
+  ['myuser_254',['MyUser',['../namespace_my_tobacco_shop_1_1_repository_1_1_my_user.html',1,'MyTobaccoShop::Repository']]],
+  ['repository_255',['Repository',['../namespace_my_tobacco_shop_1_1_repository.html',1,'MyTobaccoShop']]],
+  ['ui_256',['UI',['../namespace_my_tobacco_shop_1_1_w_p_f_1_1_u_i.html',1,'MyTobaccoShop::WPF']]],
+  ['vm_257',['VM',['../namespace_my_tobacco_shop_1_1_w_p_f_1_1_v_m.html',1,'MyTobaccoShop::WPF']]],
+  ['web_258',['Web',['../namespace_my_tobacco_shop_1_1_web.html',1,'MyTobaccoShop']]],
+  ['wpf_259',['WPF',['../namespace_my_tobacco_shop_1_1_w_p_f.html',1,'MyTobaccoShop']]],
+  ['wpfclient_260',['WPFClient',['../namespace_my_tobacco_shop_1_1_w_p_f_client.html',1,'MyTobaccoShop']]]
+];

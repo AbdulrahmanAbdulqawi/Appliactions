@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MyTobaccoShop.Web.Models.UserWeb>
+
+<h2>Users List</h2>
+@if(Model.Count() ==0)
+{
+    <p>No Data in the Database!</p>
+}
+else
+{
+    <table border="1">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.First().UserFullName)</th>
+            <th>Datasheet</th>
+            <th>Delete</th>
+            <th>Modify</th>
+        </tr>
+        @foreach(var user in Model)
+        {
+    <tr>
+        <td>@Html.DisplayFor(m => user.UserFullName)</td>
+        <td>@Html.ActionLink("[SHOW]", "Details", new { id = user.UserId })</td>
+        <td>@Html.ActionLink("[DEL]", "Remove", new { id = user.UserId })</td>
+        <td>@Html.ActionLink("[EDIT]", "Edit", new { id = user.UserId })</td>
+    </tr>
+        }
+    </table>
+}

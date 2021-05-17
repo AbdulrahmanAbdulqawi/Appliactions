@@ -1,0 +1,33 @@
+﻿@model MyTobaccoShop.Web.Models.UserWeb
+
+@{
+    ViewData["Title"] = "UsersDetails";
+}
+<h2>User Datasheet</h2>
+@Html.ActionLink("Back to the list", "Index");
+<table border="1">
+    <tr>a
+        <td>@Html.DisplayNameFor(m => m.UserId)</td>
+        <td>@Html.DisplayFor(m => m.UserId)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.UserFullName)</td>
+        <td>@Html.DisplayFor(m => m.UserFullName)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.UserEmail)</td>
+        <td>@Html.DisplayFor(m => m.UserEmail)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.UserUsername)</td>
+        <td>@Html.DisplayFor(m => m.UserUsername)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.UserPassword)</td>
+        <td>@Html.DisplayFor(m => m.UserPassword)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.UserType)</td>
+        <td>@Html.DisplayFor(m => m.UserType)</td>
+    </tr>
+</table>

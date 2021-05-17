@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyTobaccoShop.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:MyTobaccoShop.Repository.IRepository`1">
+            <summary>
+            Repository Interface.
+            </summary>
+            <typeparam name="T">Repository interface.</typeparam>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.IRepository`1.Add(`0)">
+            <summary>
+            Add a new entity.
+            </summary>
+            <param name="entity">new entity.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.IRepository`1.Update(`0,System.Int32)">
+            <summary>
+            Update an entity.
+            </summary>
+            <param name="entity">Update.</param>
+            <param name="id">id.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.IRepository`1.Remove(System.Int32)">
+            <summary>
+            Remove an entity.
+            </summary>
+            <param name="id">Remove.</param>
+            <returns>boolean vlaue.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.IRepository`1.GetById(System.Int32)">
+            <summary>
+            Return an antity that match the id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>entity.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.IRepository`1.GetAll">
+            <summary>
+            Return all entities.
+            </summary>
+            <returns>entities.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyCategory.CategoryRepository">
+            <summary>
+            Category class to implement the repository class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyCategory.CategoryRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Repository.MyCategory.CategoryRepository"/> class.
+            </summary>
+            <param name="ctx">DbContext.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyCategory.CategoryRepository.GetById(System.Int32)">
+            <summary>
+            Get Category By Id.
+            </summary>
+            <param name="id">Category id.</param>
+            <returns>Category.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyCategory.CategoryRepository.UpdateCategoryTitle(System.Int32,System.String)">
+            <summary>
+            Update Category Title implementation.
+            </summary>
+            <param name="id">Catgeory ID.</param>
+            <param name="newTitle">Category new Title.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyCategory.ICategoriesRepository">
+            <summary>
+            Categories Repository interface.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyCategory.ICategoriesRepository.UpdateCategoryTitle(System.Int32,System.String)">
+            <summary>
+            Update the Category title Method.
+            </summary>
+            <param name="id">Category ID.</param>
+            <param name="newTitle">new Category Title.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyCustomer.CustomerRepository">
+            <summary>
+            Customer class to implement the repository class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyCustomer.CustomerRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Repository.MyCustomer.CustomerRepository"/> class.
+            </summary>
+            <param name="ctx">DbContext.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyCustomer.CustomerRepository.GetById(System.Int32)">
+            <summary>
+            Get customer By Id.
+            </summary>
+            <param name="id">customer id.</param>
+            <returns>customer.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyCustomer.CustomerRepository.UpdateEmail(System.Int32,System.String)">
+            <summary>
+            Update Customer Email Method Implementation.
+            </summary>
+            <param name="id">Customer ID.</param>
+            <param name="newEmail"> new Customer Email.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyCustomer.ICustomerRepository">
+            <summary>
+            Customer interface inherit from repostiory interface.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyCustomer.ICustomerRepository.UpdateEmail(System.Int32,System.String)">
+            <summary>
+            Update Customer Email.
+            </summary>
+            <param name="id">Customer ID.</param>
+            <param name="newEmail">new Customer Email.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyOrder.IOrderRepository">
+            <summary>
+            order interfac inherit from repository interface.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyOrder.IOrderRepository.UpdateOrderQuantity(System.Int32,System.Int32)">
+            <summary>
+            Update Order Quantity Method.
+            </summary>
+            <param name="id">Order Id.</param>
+            <param name="newQuantity"> new quantity.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyOrder.OrderRepository">
+            <summary>
+            Order Repository Implementaion Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyOrder.OrderRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Repository.MyOrder.OrderRepository"/> class.
+            </summary>
+            <param name="ctx">DbContext.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyOrder.OrderRepository.GetById(System.Int32)">
+            <summary>
+            Get Order By Id.
+            </summary>
+            <param name="id">Order id.</param>
+            <returns>Order.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyOrder.OrderRepository.UpdateOrderQuantity(System.Int32,System.Int32)">
+            <summary>
+            Update Order Quantity Method Implementaion.
+            </summary>
+            <param name="id">Order ID.</param>
+            <param name="newQuantity">new quantity.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyProduct.IProductRepository">
+            <summary>
+            Product interface inherit from Repository interface.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyProduct.IProductRepository.UpdatePrice(System.Int32,System.Decimal)">
+            <summary>
+            Update Product Price Method.
+            </summary>
+            <param name="id">product id.</param>
+            <param name="price">product new price.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyProduct.ProductRepository">
+            <summary>
+            Product Repository Implementaion Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyProduct.ProductRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Repository.MyProduct.ProductRepository"/> class.
+            </summary>
+            <param name="ctx">DbContext.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyProduct.ProductRepository.GetById(System.Int32)">
+            <summary>
+            Get Product By Id Method Implementaion.
+            </summary>
+            <param name="id">Order id.</param>
+            <returns>Order.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyProduct.ProductRepository.UpdatePrice(System.Int32,System.Decimal)">
+            <summary>
+            Update Product Price Method Implementaion.
+            </summary>
+            <param name="id">Product ID.</param>
+            <param name="price">Product New Price.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyRepository`1">
+            <summary>
+            Repository Class.
+            </summary>
+            <typeparam name="T">Repository Entity.</typeparam>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyRepository`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Repository.MyRepository`1"/> class.
+            Initializes a new instance of the DbContext.
+            </summary>
+            <param name="ctx">DbContext.</param>
+        </member>
+        <member name="P:MyTobaccoShop.Repository.MyRepository`1.Context">
+            <summary>
+            Gets changes the DbContect to protected so all the desendant classes can use it.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyRepository`1.Add(`0)">
+            <summary>
+            abstract method to Add a new entity, the implmentation will be in every specific class.
+            </summary>
+            <param name="entity">new entity.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyRepository`1.GetAll">
+            <summary>
+            Return all entities.
+            </summary>
+            <returns>entities.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyRepository`1.GetById(System.Int32)">
+            <summary>
+            Return an antity that match the id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>entity.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyRepository`1.Remove(System.Int32)">
+            <summary>
+            abstract method to Remove an old entity, the implmentation will be in every specific class.
+            </summary>
+            <param name="id">Remove.</param>
+            <returns>boolean vlaue.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyRepository`1.Update(`0,System.Int32)">
+            <summary>
+            abstract method to Update an entity, the implmentation will be in every specific class.
+            </summary>
+            <param name="entity">Update.</param>
+            <param name="id">id.</param>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyUser.IUserRepository">
+            <summary>
+            User Interface inherit from repository interface.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyUser.IUserRepository.UpdateUserType(System.Int32,System.String)">
+            <summary>
+            Update User Type Method.
+            </summary>
+            <param name="id">User id.</param>
+            <param name="type">User Type.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyUser.IUserRepository.ChangeUser(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Change User.
+            </summary>
+            <param name="id">id.</param>
+            <param name="fullName">Name.</param>
+            <param name="email">Email.</param>
+            <param name="username">Username.</param>
+            <param name="password">Password.</param>
+            <param name="type">Type.</param>
+            <returns>boolean value.</returns>
+        </member>
+        <member name="T:MyTobaccoShop.Repository.MyUser.UserRepository">
+            <summary>
+            User Repository Implementaion Class.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyUser.UserRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MyTobaccoShop.Repository.MyUser.UserRepository"/> class.
+            </summary>
+            <param name="ctx">DbContext.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyUser.UserRepository.GetById(System.Int32)">
+            <summary>
+            Get User By Id.
+            </summary>
+            <param name="id">User id.</param>
+            <returns>User.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyUser.UserRepository.ChangeUser(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Change User.
+            </summary>
+            <param name="id">id.</param>
+            <param name="fullName">Name.</param>
+            <param name="email">Email.</param>
+            <param name="username">Username.</param>
+            <param name="password">Password.</param>
+            <param name="type">Type.</param>
+            <returns>boolean value.</returns>
+        </member>
+        <member name="M:MyTobaccoShop.Repository.MyUser.UserRepository.UpdateUserType(System.Int32,System.String)">
+            <summary>
+            Update User Type Method Implementaion.
+            </summary>
+            <param name="id">User ID.</param>
+            <param name="type">User New Type.</param>
+        </member>
+    </members>
+</doc>

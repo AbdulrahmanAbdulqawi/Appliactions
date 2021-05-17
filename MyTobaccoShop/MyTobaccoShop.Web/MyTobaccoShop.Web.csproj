@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>MyTobaccoShop.Web.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyTobaccoShop.Data\MyTobaccoShop.Data.csproj" />
+    <ProjectReference Include="..\MyTobaccoShop.Logic\MyTobaccoShop.Logic.csproj" />
+    <ProjectReference Include="..\MyTobaccoShop.Repository\MyTobaccoShop.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
