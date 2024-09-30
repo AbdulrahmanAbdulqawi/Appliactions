@@ -62,7 +62,7 @@
         <member name="M:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext"/> class.
-            PoliceAppDbContext constructor.
+            MyTobaccoShopDBContext constructor.
             </summary>
         </member>
         <member name="P:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.Products">
@@ -101,6 +101,16 @@
             OnModelCreating method, Create a model.
             </summary>
             <param name="modelBuilder">model to build.</param>
+        </member>
+        <member name="M:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.EnsureDatabaseCreated">
+            <summary>
+            Ensures that the database is created.
+            </summary>
+        </member>
+        <member name="M:MyTobaccoShop.Data.Models.MyTobaccoShopDBContext.CreateDatabase">
+            <summary>
+            Creates the database file.
+            </summary>
         </member>
         <member name="T:MyTobaccoShop.Data.Models.Order">
             <summary>

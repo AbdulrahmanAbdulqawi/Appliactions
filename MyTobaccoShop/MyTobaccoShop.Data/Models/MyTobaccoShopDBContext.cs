@@ -3,20 +3,27 @@
 // </copyright>
 namespace MyTobaccoShop.Data.Models
 {
+    using Microsoft.Data.SqlClient;
     using Microsoft.EntityFrameworkCore;
+    using System;
+    using System.IO;
 
     /// <summary>
     /// MyTobaccoShopDBContext Class.
     /// </summary>
     public class MyTobaccoShopDBContext : DbContext
     {
+        private static string _databaseName = "MyTobaccoShopDB";
+        private static string _databasePath;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MyTobaccoShopDBContext"/> class.
-        /// PoliceAppDbContext constructor.
+        /// MyTobaccoShopDBContext constructor.
         /// </summary>
         public MyTobaccoShopDBContext()
         {
-            this.Database.EnsureCreated();
+            _databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"{_databaseName}.mdf");
+            EnsureDatabaseCreated();
         }
 
         /// <summary>
@@ -52,8 +59,8 @@ namespace MyTobaccoShop.Data.Models
         {
             if (optionsBuilder?.IsConfigured == false)
             {
-                string str = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=""T:\semester 8\prog 4\MyTobaccoShop\MyTobaccoShop\MyTobaccoShop.Data\MyTobaccoShopDB.mdf""; Integrated Security = True; MultipleActiveResultSets=true;";
-                optionsBuilder.UseLazyLoadingProxies().UseSqlServer(str);
+                string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={_databasePath};Integrated Security=True;MultipleActiveResultSets=true;";
+                optionsBuilder.UseLazyLoadingProxies().UseSqlServer(connectionString);
             }
         }
 
@@ -110,6 +117,49 @@ namespace MyTobaccoShop.Data.Models
                 modelBuilder.Entity<Category>().HasData(cigarette);
                 modelBuilder.Entity<Product>().HasData(product1);
                 modelBuilder.Entity<Order>().HasData(order1);
+            }
+        }
+
+        /// <summary>
+        /// Ensures that the database is created.
+        /// </summary>
+        private void EnsureDatabaseCreated()
+        {
+            if (!File.Exists(_databasePath))
+            {
+                CreateDatabase();
+            }
+
+            // Ensure the database schema is created
+            Database.EnsureCreated();
+        }
+
+        /// <summary>
+        /// Creates the database file.
+        /// </summary>
+        private void CreateDatabase()
+        {
+            string masterConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True";
+
+            using (var connection = new SqlConnection(masterConnectionString))
+            {
+                connection.Open();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = $@"
+                        CREATE DATABASE [{_databaseName}]
+                        ON PRIMARY (
+                            NAME = [{_databaseName}_Data],
+                            FILENAME = '{_databasePath}'
+                        )
+                        LOG ON (
+                            NAME = [{_databaseName}_Log],
+                            FILENAME = '{Path.ChangeExtension(_databasePath, ".ldf")}'
+                        )";
+
+                    command.ExecuteNonQuery();
+                }
             }
         }
     }
